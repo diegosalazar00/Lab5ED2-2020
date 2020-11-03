@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\voca9\\source\\repos\\Cifrados\\Cifrados\\Cifrados.csproj": {}
+    "C:\\Users\\voca9\\Desktop\\Cifrados\\Cifrados\\Cifrados.csproj": {}
   },
   "projects": {
-    "C:\\Users\\voca9\\source\\repos\\Cifrados\\Cifrados\\Cifrados.csproj": {
+    "C:\\Users\\voca9\\Desktop\\Cifrados\\Cifrados\\Cifrados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\voca9\\source\\repos\\Cifrados\\Cifrados\\Cifrados.csproj",
+        "projectUniqueName": "C:\\Users\\voca9\\Desktop\\Cifrados\\Cifrados\\Cifrados.csproj",
         "projectName": "Cifrados",
-        "projectPath": "C:\\Users\\voca9\\source\\repos\\Cifrados\\Cifrados\\Cifrados.csproj",
+        "projectPath": "C:\\Users\\voca9\\Desktop\\Cifrados\\Cifrados\\Cifrados.csproj",
         "packagesPath": "C:\\Users\\voca9\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\voca9\\source\\repos\\Cifrados\\Cifrados\\obj\\",
+        "outputPath": "C:\\Users\\voca9\\Desktop\\Cifrados\\Cifrados\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
