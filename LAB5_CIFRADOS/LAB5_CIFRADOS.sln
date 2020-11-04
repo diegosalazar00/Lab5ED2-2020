@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAB5_CIFRADOS", "LAB5_CIFRADOS\LAB5_CIFRADOS.csproj", "{AF07AAD2-CC48-4914-8A85-3F4DA97E9D1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cifrados", "..\..\..\Desktop\Estructura de Datos II\Cifrados\Cifrados.csproj", "{605C867C-F9A2-4703-97A2-EF8C11039AB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF07AAD2-CC48-4914-8A85-3F4DA97E9D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF07AAD2-CC48-4914-8A85-3F4DA97E9D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF07AAD2-CC48-4914-8A85-3F4DA97E9D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF07AAD2-CC48-4914-8A85-3F4DA97E9D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605C867C-F9A2-4703-97A2-EF8C11039AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605C867C-F9A2-4703-97A2-EF8C11039AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605C867C-F9A2-4703-97A2-EF8C11039AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605C867C-F9A2-4703-97A2-EF8C11039AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B41125B-86E2-4E0B-9A09-539C6188B4A6}
+	EndGlobalSection
+EndGlobal
