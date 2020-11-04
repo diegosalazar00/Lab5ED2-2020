@@ -1,0 +1,9 @@
+C:\Users\voca9\Desktop\Cifrados\Cifrados\bin\Debug\netcoreapp3.1\Cifrados.deps.json
+C:\Users\voca9\Desktop\Cifrados\Cifrados\bin\Debug\netcoreapp3.1\Cifrados.dll
+C:\Users\voca9\Desktop\Cifrados\Cifrados\bin\Debug\netcoreapp3.1\Cifrados.pdb
+C:\Users\voca9\Desktop\Cifrados\Cifrados\obj\Debug\netcoreapp3.1\Cifrados.csprojAssemblyReference.cache
+C:\Users\voca9\Desktop\Cifrados\Cifrados\obj\Debug\netcoreapp3.1\Cifrados.AssemblyInfoInputs.cache
+C:\Users\voca9\Desktop\Cifrados\Cifrados\obj\Debug\netcoreapp3.1\Cifrados.AssemblyInfo.cs
+C:\Users\voca9\Desktop\Cifrados\Cifrados\obj\Debug\netcoreapp3.1\Cifrados.csproj.CoreCompileInputs.cache
+C:\Users\voca9\Desktop\Cifrados\Cifrados\obj\Debug\netcoreapp3.1\Cifrados.dll
+C:\Users\voca9\Desktop\Cifrados\Cifrados\obj\Debug\netcoreapp3.1\Cifrados.pdb
