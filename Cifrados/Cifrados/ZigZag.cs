@@ -255,7 +255,7 @@ namespace Cifrados
                                     contadorfilas = 0;
                                 }
                             }
-                            Escribir(columnas);
+                            Escribirdes(columnas);
                         }
                         else
                         {
@@ -267,6 +267,25 @@ namespace Cifrados
             }
             File.Delete(Rutaarchivo);
             return correcto;
+        }
+        public void Escribirdes(int columnas)
+        {
+            using (var file = new FileStream(Rutaserver + Nombrearchivo + ".txt", FileMode.Append))
+            {
+                using (var writer = new StreamWriter(file))
+                {
+                    for (int i = 0; i < Filas; i++)
+                    {
+                        for (int j = 0; j < columnas; j++)
+                        {
+                            if (Estructura[i, j] != null)
+                            {
+                                writer.Write(Estructura[i, j]);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

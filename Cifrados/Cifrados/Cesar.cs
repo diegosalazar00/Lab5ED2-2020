@@ -51,7 +51,7 @@ namespace Cifrados
 
         public void Cifrar()
         {
-            var alfabeto = "abcdefghijklmnñopqrstuvwxyz0123456789";
+            var alfabeto = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789";
             var pos = Clave.Length;
             char[] alfabetomod = new char[alfabeto.Length];
             for (int i = 0; i < Clave.Length; i++)
@@ -118,7 +118,7 @@ namespace Cifrados
         }
         public void Descifrar()
         {
-            var alfabeto = "abcdefghijklmnñopqrstuvwxyz0123456789";
+            var alfabeto = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789";
             var pos = Clave.Length;
             char[] alfabetomod = new char[alfabeto.Length];
             for (int i = 0; i < Clave.Length; i++)
@@ -163,11 +163,24 @@ namespace Cifrados
                                 }
                             }
                         }
-                        escribir();
+                        escribirdes();
                     }
                 }
             }
             File.Delete(Rutaarchivo);
+        }
+        public void escribirdes()
+        {
+            using (var file = new FileStream(Rutaserver + Nombrearchivo + ".txt", FileMode.Append))
+            {
+                using (var writer = new BinaryWriter(file))
+                {
+                    for (int i = 0; i < posicionbuffer; i++)
+                    {
+                        writer.Write(bufferescritura[i]);
+                    }
+                }
+            }
         }
     }
 }
