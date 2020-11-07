@@ -56,8 +56,8 @@ namespace API.Controllers
                     break;
                 case "RUTA":
                     Espiral espiral = new Espiral(rows, columns, nombre, ruta, server);
-                    espiral.Cifrar();                     
-                     
+                    espiral.Cifrar();   
+                    
                     break;
                 default:
                     break;
@@ -96,7 +96,7 @@ namespace API.Controllers
                     zigzagCipher.decipher(levels,result , nombre);
                     break;
                 case ".rt":
-                    Espiral espiral = new Espiral(rows, columns, nombre, ruta, server);                    
+                    Espiral espiral = new Espiral(rows,columns,nombre,ruta,server);
                     espiral.Descifrar();
                     break;
                 default:
