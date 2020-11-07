@@ -29,26 +29,75 @@ namespace API.Controllers
             int levels = key.levels;
             int rows = key.rows;
             int columns = key.columns;
+            var result = new StringBuilder();
+            using (var reader = new StreamReader(file.OpenReadStream()))
+            {
+                while (reader.Peek() >= 0)
+                    result.AppendLine(reader.ReadLine());
+            }
+
             var method1 = method.ToUpper();
             switch (method1)
             {
                 case "CESAR":
                     Cesar cesar = new Cesar(clave, nombre, ruta, server);//revisar archivos grandes
                     cesar.Cifrar();
-                    //cesar.Descifrar();
+         
                     break;
                 case "CÉSAR":
                     Cesar cesar1 = new Cesar(clave, nombre, ruta, server);
-                    cesar1.Cifrar();
+                    cesar1.Cifrar();                    
                     break;
                 case "ZIGZAG":
-                    ZigZag zigZag = new ZigZag(nombre,ruta,server,levels);//revisar error 
-                    //zigZag.Cifrar();
-                    zigZag.Descifrar();
+                    
+                    ZigZag zigzagCipher = new ZigZag();
+                    zigzagCipher.calculate(levels, result, nombre);
+                   
                     break;
                 case "RUTA":
-                    Espiral espiral=new Espiral()//revisar parametros 
-                       
+                    Espiral espiral = new Espiral(rows, columns, nombre, ruta, server);
+                    espiral.Cifrar();                     
+                     
+                    break;
+                default:
+                    break;
+            }
+            return Ok();
+        }
+        [HttpPost("decipher")]
+        public ActionResult decipher([FromForm] IFormFile file, [FromForm] Llaves key)
+        {
+            var pathActual = Environment.CurrentDirectory;
+            Directory.CreateDirectory(pathActual + "\\temporal\\");
+            ArchivoARuta(file);
+            var nombre = file.FileName;
+            var ruta = pathActual + "\\temporal\\" + nombre;
+            var server = pathActual + "\\resultados";
+            string clave = key.words;
+            int levels = key.levels;
+            int rows = key.rows;
+            int columns = key.columns;
+            string extencion = Path.GetExtension(file.FileName);
+            var result = new StringBuilder();
+            using (var reader = new StreamReader(file.OpenReadStream()))
+            {
+                while (reader.Peek() >= 0)
+                    result.AppendLine(reader.ReadLine());
+            }
+            extencion = extencion.ToLower();
+            switch (extencion)
+            {
+                case ".csr":
+                    Cesar cesar = new Cesar(clave, nombre, ruta, server);//revisar archivos grandes
+                    cesar.Descifrar();
+                    break;
+                case ".zz":
+                    ZigZag zigzagCipher = new ZigZag();
+                    zigzagCipher.decipher(levels,result , nombre);
+                    break;
+                case ".rt":
+                    Espiral espiral = new Espiral(rows, columns, nombre, ruta, server);                    
+                    espiral.Descifrar();
                     break;
                 default:
                     break;
@@ -64,11 +113,11 @@ namespace API.Controllers
                 while (reader.Peek() >= 0)
                     resultado.AppendLine(reader.ReadLine());
             }
-            resultado.ToString();
+            resultado.ToString();           
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(Environment.CurrentDirectory + "\\Temporal\\" + Archivo.FileName, true))
-            {
-                file.Write(resultado);
-            }
+            {                
+                file.Write(resultado);                
+            }            
         }
 
     }
